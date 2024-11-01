@@ -201,12 +201,12 @@ function TransactionsList({transactions = [], loading = false, reachedLastPage =
                 return <div className="cell-content">
                     {type === TXN_TYPES.PAYMENT ? <div>
                         <AlgoIcon width={10}></AlgoIcon>
-                        <NumberFormat
+                        <NumericFormat
                             value={microalgosToAlgos(amount)}
                             displayType={'text'}
                             thousandSeparator={true}
                             style={{marginLeft: 5}}
-                        ></NumberFormat>
+                        ></NumericFormat>
                     </div> : ''}
 
                     {type === TXN_TYPES.ASSET_TRANSFER ? <div>
@@ -227,12 +227,12 @@ function TransactionsList({transactions = [], loading = false, reachedLastPage =
 
                 return <div className="cell-content">
                     <AlgoIcon width={10}></AlgoIcon>
-                    <NumberFormat
+                    <NumericFormat
                         value={microalgosToAlgos(fee)}
                         displayType={'text'}
                         thousandSeparator={true}
                         style={{marginLeft: 5}}
-                    ></NumberFormat>
+                    ></NumericFormat>
                 </div>;
             }
         });

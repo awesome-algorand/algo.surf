@@ -3,7 +3,7 @@ import React from "react";
 import {Grid} from "@mui/material";
 import {CoreTransaction} from "../../../../../../../packages/core-sdk/classes/core/CoreTransaction";
 import AlgoIcon from "../../../../AlgoIcon/AlgoIcon";
-import NumberFormat from "react-number-format";
+import {NumericFormat} from "react-number-format";
 import LinkToAccount from "../../../../Common/Links/LinkToAccount";
 import {microalgosToAlgos,shadedClr} from "../../../../../../../utils/common";
 
@@ -53,12 +53,12 @@ function PaymentTransaction(props): JSX.Element {
                                     Amount
                                 </div>
                                 <div className="value">
-                                    <NumberFormat
+                                    <NumericFormat
                                         value={microalgosToAlgos(txnInstance.getAmount())}
                                         displayType={'text'}
                                         thousandSeparator={true}
                                         style={{marginRight: 5}}
-                                    ></NumberFormat>
+                                    ></NumericFormat>
                                     <AlgoIcon></AlgoIcon>
                                 </div>
                             </div>
@@ -85,12 +85,12 @@ function PaymentTransaction(props): JSX.Element {
                                     Close amount
                                 </div>
                                 <div className="value">
-                                    <NumberFormat
+                                    <NumericFormat
                                         value={microalgosToAlgos(txnInstance.getCloseAmount())}
                                         displayType={'text'}
                                         thousandSeparator={true}
                                         style={{marginRight: 5}}
-                                    ></NumberFormat>
+                                    ></NumericFormat>
                                     <AlgoIcon></AlgoIcon>
                                 </div>
                             </div>

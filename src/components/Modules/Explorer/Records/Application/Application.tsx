@@ -15,7 +15,7 @@ import CustomError from "../../Common/CustomError/CustomError";
 import ApplicationActions from "./Sections/ApplicationActions/ApplicationActions";
 import ApplicationAbi from "./Sections/ApplicationABI/ApplicationAbi";
 
-const network = process.env.REACT_APP_NETWORK;
+const network = import.meta.env.VITE_NETWORK;
 
 function Application(): JSX.Element {
     const dispatch = useDispatch();

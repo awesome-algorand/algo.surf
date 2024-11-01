@@ -8,7 +8,7 @@ import {
     dataGridCellConfig,
     dataGridStylesBlackHeader
 } from "../../../../../../../theme/styles/datagrid";
-import NumberFormat from "react-number-format";
+import {NumericFormat} from "react-number-format";
 import {Grid} from "@mui/material";
 
 
@@ -49,11 +49,11 @@ function ApplicationGlobalState(): JSX.Element {
             flex: 2,
             renderCell: (params: GridValueGetterParams) => {
                 return <div>
-                    {params.row.type === 'uint' ? <NumberFormat
+                    {params.row.type === 'uint' ? <NumericFormat
                         value={params.row.value}
                         displayType={'text'}
                         thousandSeparator={true}
-                    ></NumberFormat> : params.row.value}
+                    ></NumericFormat> : params.row.value}
                 </div>;
             }
         }

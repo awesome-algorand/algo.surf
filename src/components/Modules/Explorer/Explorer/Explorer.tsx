@@ -5,7 +5,7 @@ import {initLivedata} from "../../../../redux/explorer/actions/liveData";
 import {Outlet, useLocation} from "react-router-dom";
 import Header from "../Header/Header";
 
-const network = process.env.REACT_APP_NETWORK;
+const network = import.meta.env.VITE_NETWORK;
 
 function Explorer(): JSX.Element {
   const location = useLocation();

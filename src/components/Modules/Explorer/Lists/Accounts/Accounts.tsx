@@ -7,7 +7,7 @@ import {
     CircularProgress, Pagination,
     Tooltip
 } from "@mui/material";
-import NumberFormat from 'react-number-format';
+import {NumericFormat} from 'react-number-format';
 import {
     DataGrid,
     GridColDef, gridPageCountSelector,
@@ -72,12 +72,12 @@ function Accounts(): JSX.Element {
             renderCell: (params: GridValueGetterParams) => {
                 return <div>
                     <AlgoIcon></AlgoIcon>
-                    <NumberFormat
+                    <NumericFormat
                         value={microalgosToAlgos(params.row.amount)}
                         displayType={'text'}
                         thousandSeparator={true}
                         style={{marginLeft: 5}}
-                    ></NumberFormat>
+                    ></NumericFormat>
                 </div>;
             }
         },

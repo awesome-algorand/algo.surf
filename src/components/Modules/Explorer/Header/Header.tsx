@@ -4,7 +4,7 @@ import {useNavigate, useLocation} from "react-router-dom";
 import {Grid, Tab, Tabs} from "@mui/material";
 import Search from "../Search/Search";
 
-const networkLabel = process.env.REACT_APP_NETWORK;
+const networkLabel = import.meta.env.VITE_NETWORK;
 
 function Header(): JSX.Element {
     const navigate = useNavigate();

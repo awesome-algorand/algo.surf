@@ -14,7 +14,7 @@ import LinkToAccount from "../../Common/Links/LinkToAccount";
 import {Alert} from "@mui/lab";
 import Copyable from '../../../../Common/Copyable/Copyable';
 
-const network = process.env.REACT_APP_NETWORK;
+const network = import.meta.env.VITE_NETWORK;
 
 function Block(): JSX.Element {
     const dispatch = useDispatch();

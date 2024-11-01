@@ -10,7 +10,7 @@ import {CoreGroup} from "../../../../../packages/core-sdk/classes/core/CoreGroup
 import LinkToBlock from "../../Common/Links/LinkToBlock";
 import {Alert} from "@mui/lab";
 
-const network = process.env.REACT_APP_NETWORK;
+const network = import.meta.env.VITE_NETWORK;
 
 function Group(): JSX.Element {
     const dispatch = useDispatch();

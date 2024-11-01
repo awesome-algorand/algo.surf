@@ -5,7 +5,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {loadAccount} from "../../../../../redux/explorer/actions/account";
 import {RootState} from "../../../../../redux/store";
 import {Chip, Grid, Tab, Tabs} from "@mui/material";
-import NumberFormat from "react-number-format";
+import {NumericFormat} from "react-number-format";
 import {microalgosToAlgos} from "../../../../../utils/common";
 import AlgoIcon from "../../AlgoIcon/AlgoIcon";
 import {CoreAccount} from "../../../../../packages/core-sdk/classes/core/CoreAccount";
@@ -16,7 +16,7 @@ import Copyable from '../../../../Common/Copyable/Copyable';
 import LinkToApplication from '../../Common/Links/LinkToApplication';
 import LinkToAccount from '../../Common/Links/LinkToAccount';
 
-const network = process.env.REACT_APP_NETWORK;
+const network = import.meta.env.VITE_NETWORK;
 
 function Account(): JSX.Element {
     const dispatch = useDispatch();
@@ -83,11 +83,11 @@ function Account(): JSX.Element {
                                         Balance
                                     </div>
                                     <div className="value">
-                                        <NumberFormat
+                                        <NumericFormat
                                             value={microalgosToAlgos(new CoreAccount(account.information).getBalance())}
                                             displayType={'text'}
                                             thousandSeparator={true}
-                                        ></NumberFormat>
+                                        ></NumericFormat>
                                         <AlgoIcon></AlgoIcon>
                                         <Copyable value={microalgosToAlgos(new CoreAccount(account.information).getBalance())} />
                                     </div>
@@ -127,11 +127,11 @@ function Account(): JSX.Element {
                                         Minimum balance
                                     </div>
                                     <div className="value">
-                                        <NumberFormat
+                                        <NumericFormat
                                             value={microalgosToAlgos(new CoreAccount(account.information).getMinBalance())}
                                             displayType={'text'}
                                             thousandSeparator={true}
-                                        ></NumberFormat>
+                                        ></NumericFormat>
                                         <AlgoIcon></AlgoIcon>
                                         <Copyable value={microalgosToAlgos(new CoreAccount(account.information).getMinBalance())} />
                                     </div>

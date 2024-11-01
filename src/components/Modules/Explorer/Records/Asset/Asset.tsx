@@ -6,7 +6,7 @@ import {RootState} from "../../../../../redux/store";
 import {Grid, Link, Tab, Tabs} from "@mui/material";
 import {loadAsset} from "../../../../../redux/explorer/actions/asset";
 import {CoreAsset} from "../../../../../packages/core-sdk/classes/core/CoreAsset";
-import NumberFormat from "react-number-format";
+import {NumericFormat} from "react-number-format";
 import LinkToAccount from "../../Common/Links/LinkToAccount";
 import LoadingTile from "../../../../Common/LoadingTile/LoadingTile";
 import {shadedClr} from "../../../../../utils/common";
@@ -16,7 +16,7 @@ import AssetARCValidator from "./Actions/AssetARCValidator/AssetARCValidator";
 import MultiFormatViewer from "../../../../../components/Common/MultiFormatViewer/MultiFormatViewer";
 import Copyable from "../../../../../components/Common/Copyable/Copyable";
 
-const network = process.env.REACT_APP_NETWORK;
+const network = import.meta.env.VITE_NETWORK;
 
 function Asset(): JSX.Element {
     const dispatch = useDispatch();
@@ -90,7 +90,7 @@ function Asset(): JSX.Element {
                                         Total supply
                                     </div>
                                     <div className="value">
-                                        <NumberFormat
+                                        <NumericFormat
                                             value={assetInstance.getTotalSupply()}
                                             displayType={'text'}
                                             thousandSeparator={true}

@@ -2,7 +2,7 @@ import './AssetTransferTransaction.scss';
 import React from "react";
 import {Grid} from "@mui/material";
 import {CoreTransaction} from "../../../../../../../packages/core-sdk/classes/core/CoreTransaction";
-import NumberFormat from "react-number-format";
+import {NumericFormat} from "react-number-format";
 import {CoreAsset} from "../../../../../../../packages/core-sdk/classes/core/CoreAsset";
 import LinkToAccount from "../../../../Common/Links/LinkToAccount";
 import LinkToAsset from "../../../../Common/Links/LinkToAsset";
@@ -65,12 +65,12 @@ function AssetTransferTransaction(props): JSX.Element {
                                     Amount
                                 </div>
                                 <div className="value">
-                                    <NumberFormat
+                                    <NumericFormat
                                         value={assetInstance.getAmountInDecimals(txnInstance.getAmount())}
                                         displayType={'text'}
                                         thousandSeparator={true}
                                         style={{marginRight: 5}}
-                                    ></NumberFormat>
+                                    ></NumericFormat>
                                     {assetInstance.getUnitName()}
                                 </div>
                             </div>
@@ -98,12 +98,12 @@ function AssetTransferTransaction(props): JSX.Element {
                                     Close amount
                                 </div>
                                 <div className="value">
-                                    <NumberFormat
+                                    <NumericFormat
                                         value={assetInstance.getAmountInDecimals(txnInstance.getCloseAmount())}
                                         displayType={'text'}
                                         thousandSeparator={true}
                                         style={{marginRight: 5}}
-                                    ></NumberFormat>
+                                    ></NumericFormat>
                                     {assetInstance.getUnitName()}
                                 </div>
                             </div>

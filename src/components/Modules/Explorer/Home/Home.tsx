@@ -5,7 +5,7 @@ import {Grid} from "@mui/material";
 import LiveBlocks from "../LiveBlocks/LiveBlocks";
 import LiveTransactions from "../LiveTransactions/LiveTransactions";
 
-const network = process.env.REACT_APP_NETWORK;
+const network = import.meta.env.VITE_NETWORK;
 
 function Home(): JSX.Element {
     return (<div className={"home-wrapper"}>

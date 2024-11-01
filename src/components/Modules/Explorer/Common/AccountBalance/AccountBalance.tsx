@@ -2,7 +2,7 @@ import './AccountBalance.scss';
 import React, {useEffect, useState} from "react";
 import dappflow from "../../../../../utils/dappflow";
 import {A_AccountInformation} from "../../../../../packages/core-sdk/types";
-import NumberFormat from "react-number-format";
+import {NumericFormat} from "react-number-format";
 import {defaultAccount} from "../../../../../redux/wallet/actions/wallet";
 import {AccountClient} from "../../../../../packages/core-sdk/clients/accountClient";
 import {CoreAccount} from "../../../../../packages/core-sdk/classes/core/CoreAccount";
@@ -44,11 +44,11 @@ function AccountBalance({address}: AccountBalanceProps): JSX.Element {
     return (<div className={"account-balance-wrapper"}>
         <div className={"account-balance-container"}>
 
-            <NumberFormat
+            <NumericFormat
                 value={microalgosToAlgos(new CoreAccount(account).getBalance())}
                 displayType={'text'}
                 thousandSeparator={true}
-            ></NumberFormat>
+            ></NumericFormat>
             <span style={{marginLeft: '5px'}}>Algo</span>
 
         </div>

@@ -30,7 +30,7 @@ import AssetFreezeTransaction from "./Types/AssetFreezeTransaction/AssetFreezeTr
 import StateProofTransaction from "./Types/StateProofTransaction/StateProofTransaction";
 import Copyable from '../../../../Common/Copyable/Copyable';
 
-const network = process.env.REACT_APP_NETWORK;
+const network = import.meta.env.VITE_NETWORK;
 
 function Transaction(): JSX.Element {
     const dispatch = useDispatch();

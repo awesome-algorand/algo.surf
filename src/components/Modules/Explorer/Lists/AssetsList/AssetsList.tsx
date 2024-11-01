@@ -22,7 +22,7 @@ import LinkToAsset from "../../Common/Links/LinkToAsset";
 import CustomNoRowsOverlay from "../../Common/CustomNoRowsOverlay/CustomNoRowsOverlay";
 import {A_AccountInformation, A_Asset} from "../../../../../packages/core-sdk/types";
 import {CoreAccount} from "../../../../../packages/core-sdk/classes/core/CoreAccount";
-import NumberFormat from "react-number-format";
+import {NumericFormat} from "react-number-format";
 import Copyable from '../../../../Common/Copyable/Copyable';
 
 interface AssetsListProps {
@@ -133,11 +133,11 @@ function AssetsList({assets = [], loading = false, accountInfo, fields = ['name'
 
                 const assetInstance = new CoreAsset(params.row);
                 return <div>
-                    <NumberFormat
+                    <NumericFormat
                         value={bal}
                         displayType={'text'}
                         thousandSeparator={true}
-                    ></NumberFormat>
+                    ></NumericFormat>
                     &nbsp; {assetInstance.getUnitName()}
                 </div>;
             }

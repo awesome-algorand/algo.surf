@@ -2,7 +2,7 @@ import './TransactionAdditionalDetails.scss';
 import React from "react";
 import {Accordion, AccordionDetails, AccordionSummary, Grid, Typography} from "@mui/material";
 import {ExpandMore} from "@mui/icons-material";
-import NumberFormat from "react-number-format";
+import {NumericFormat} from "react-number-format";
 import AlgoIcon from "../../../../AlgoIcon/AlgoIcon";
 import {CoreTransaction} from "../../../../../../../packages/core-sdk/classes/core/CoreTransaction";
 import {shadedClr,microalgosToAlgos} from "../../../../../../../utils/common";
@@ -53,12 +53,12 @@ function TransactionAdditionalDetails(props): JSX.Element {
                                         Sender rewards
                                     </div>
                                     <div className="value">
-                                        <NumberFormat
+                                        <NumericFormat
                                             value={microalgosToAlgos(txnInstance.getSenderRewards())}
                                             displayType={'text'}
                                             thousandSeparator={true}
                                             style={{marginRight: 5}}
-                                        ></NumberFormat>
+                                        ></NumericFormat>
                                         <AlgoIcon></AlgoIcon>
                                     </div>
                                 </div>
@@ -70,12 +70,12 @@ function TransactionAdditionalDetails(props): JSX.Element {
                                         Receiver rewards
                                     </div>
                                     <div className="value">
-                                        <NumberFormat
+                                        <NumericFormat
                                             value={microalgosToAlgos(txnInstance.getReceiverRewards())}
                                             displayType={'text'}
                                             thousandSeparator={true}
                                             style={{marginRight: 5}}
-                                        ></NumberFormat>
+                                        ></NumericFormat>
                                         <AlgoIcon></AlgoIcon>
                                     </div>
                                 </div>

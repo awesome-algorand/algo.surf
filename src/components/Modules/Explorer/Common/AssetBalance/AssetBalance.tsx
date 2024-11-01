@@ -4,7 +4,7 @@ import {AssetClient} from "../../../../../packages/core-sdk/clients/assetClient"
 import dappflow from "../../../../../utils/dappflow";
 import {A_Asset} from "../../../../../packages/core-sdk/types";
 import {CoreAsset} from "../../../../../packages/core-sdk/classes/core/CoreAsset";
-import NumberFormat from "react-number-format";
+import {NumericFormat} from "react-number-format";
 import LinkToAsset from "../Links/LinkToAsset";
 
 
@@ -68,11 +68,11 @@ function AssetBalance({id, balance = 0, by = 'id', assetDef}: AssetBalanceProps)
     return (<div className={"asset-balance-wrapper"}>
         <div className={"asset-balance-container"}>
 
-            <NumberFormat
+            <NumericFormat
                 value={new CoreAsset(asset).getAmountInDecimals(balance)}
                 displayType={'text'}
                 thousandSeparator={true}
-            ></NumberFormat>
+            ></NumericFormat>
 
             <span style={{marginLeft: '5px'}}>
                 <LinkToAsset id={new CoreAsset(asset).getIndex()} name={new CoreAsset(asset).getUnitName()}></LinkToAsset>

@@ -2,7 +2,7 @@ import './AssetConfigTransaction.scss';
 import React from "react";
 import {Grid, Link} from "@mui/material";
 import {CoreTransaction} from "../../../../../../../packages/core-sdk/classes/core/CoreTransaction";
-import NumberFormat from "react-number-format";
+import {NumericFormat} from "react-number-format";
 import {CoreAsset} from "../../../../../../../packages/core-sdk/classes/core/CoreAsset";
 import LinkToAccount from "../../../../Common/Links/LinkToAccount";
 import LinkToAsset from "../../../../Common/Links/LinkToAsset";
@@ -100,11 +100,11 @@ function AssetConfigTransaction(props): JSX.Element {
                                         Total supply
                                     </div>
                                     <div className="value">
-                                        <NumberFormat
+                                        <NumericFormat
                                             value={assetInstance.getTotalSupply()}
                                             displayType={'text'}
                                             thousandSeparator={true}
-                                        ></NumberFormat>
+                                        ></NumericFormat>
                                         <span style={{marginLeft: 5}}>{assetInstance.getUnitName()}</span>
                                     </div>
                                 </div>

@@ -5,7 +5,7 @@ import {
     dataGridCellConfig,
     dataGridStylesBlackHeader
 } from "../../../../../../../../../theme/styles/datagrid";
-import NumberFormat from "react-number-format";
+import {NumericFormat} from "react-number-format";
 import {A_GlobalStateDelta} from "../../../../../../../../../packages/core-sdk/types";
 import {CoreGlobalState} from "../../../../../../../../../packages/core-sdk/classes/core/CoreGlobalStateDelta";
 import {Grid} from "@mui/material";
@@ -61,11 +61,11 @@ function AppCallTxnGlobalStateDelta(props): JSX.Element {
                 const gStateDeltaInstance = new CoreGlobalState(params.row);
                 const action = gStateDeltaInstance.getAction();
                 return <div>
-                    {action === 2 ? <NumberFormat
+                    {action === 2 ? <NumericFormat
                         value={gStateDeltaInstance.getValue()}
                         displayType={'text'}
                         thousandSeparator={true}
-                    ></NumberFormat> : gStateDeltaInstance.getValue()}
+                    ></NumericFormat> : gStateDeltaInstance.getValue()}
                 </div>;
             }
         }
