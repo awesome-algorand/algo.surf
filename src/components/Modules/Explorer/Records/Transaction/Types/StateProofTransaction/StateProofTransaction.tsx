@@ -4,7 +4,7 @@ import {Grid} from "@mui/material";
 import {CoreTransaction} from "../../../../../../../packages/core-sdk/classes/core/CoreTransaction";
 import LinkToAccount from "../../../../Common/Links/LinkToAccount";
 import {shadedClr} from "../../../../../../../utils/common";
-import ReactJson from "react-json-view";
+import ReactJson from "@microlink/react-json-view";
 
 
 function StateProofTransaction(props): JSX.Element {

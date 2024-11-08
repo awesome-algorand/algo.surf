@@ -1,7 +1,7 @@
 import './JsonViewer.scss';
-import React, {useState} from "react";
+import {useState} from "react";
 import {Button, Dialog, DialogActions, DialogContent, DialogTitle} from "@mui/material";
-import ReactJson from 'react-json-view'
+import ReactJson from '@microlink/react-json-view'
 import {copyContent, exportData} from "../../../utils/common";
 import {useDispatch} from "react-redux";
 import CloseIcon from "@mui/icons-material/Close";
@@ -14,7 +14,7 @@ const initialState: JsonViewerState = {
     show: false
 };
 
-function JsonViewer(props): JSX.Element {
+function JsonViewer(props: any): JSX.Element {
 
     const [
         {show},

@@ -6,7 +6,7 @@ import {
     Pagination,
     Tooltip
 } from "@mui/material";
-import NumberFormat from 'react-number-format';
+import {NumericFormat} from 'react-number-format';
 import {
     DataGrid,
     GridColDef, gridPageCountSelector,
