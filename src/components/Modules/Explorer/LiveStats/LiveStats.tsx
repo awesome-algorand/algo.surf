@@ -6,7 +6,7 @@ import {shadedClr} from "../../../../utils/common";
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import {Tooltip,Box} from "@mui/material";
 
-const NETWORK = process.env.REACT_APP_NETWORK;
+const NETWORK = import.meta.env.VITE_APP_NETWORK;
 
 function LiveStats(): JSX.Element {
     const liveData = useSelector((state: RootState) => state.liveData);

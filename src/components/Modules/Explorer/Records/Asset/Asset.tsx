@@ -18,7 +18,7 @@ import Copyable from "../../../../../components/Common/Copyable/Copyable";
 import Dym from "../Dym";
 import useTitle from "../../../../Common/UseTitle/UseTitle";
 
-const network = process.env.REACT_APP_NETWORK;
+const network = import.meta.env.VITE_APP_NETWORK;
 
 function Asset(): JSX.Element {
     const dispatch = useDispatch();

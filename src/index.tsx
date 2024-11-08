@@ -1,4 +1,4 @@
-import React from 'react';
+import { StrictMode } from 'react'
 import ReactDOM from 'react-dom/client';
 import './index.scss';
 import {ThemeProvider} from "@mui/material";
@@ -8,8 +8,9 @@ import { Provider } from 'react-redux';
 import App from "./components/App/App";
 import { ConfirmProvider } from "material-ui-confirm";
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
+const root = ReactDOM.createRoot(document.getElementById("root")!);
 root.render(
+    <StrictMode>
     <Provider store={store}>
         <ThemeProvider theme={theme}>
             <ConfirmProvider>
@@ -17,4 +18,5 @@ root.render(
             </ConfirmProvider>
         </ThemeProvider>
     </Provider>
+    </StrictMode>
 );

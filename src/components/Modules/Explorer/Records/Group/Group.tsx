@@ -11,7 +11,7 @@ import LinkToBlock from "../../Common/Links/LinkToBlock";
 import {Alert} from "@mui/lab";
 import useTitle from "../../../../Common/UseTitle/UseTitle";
 
-const network = process.env.REACT_APP_NETWORK;
+const network = import.meta.env.VITE_APP_NETWORK;
 
 function Group(): JSX.Element {
     const dispatch = useDispatch();

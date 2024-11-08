@@ -31,13 +31,13 @@ function Footer(): JSX.Element {
     </div>
 }
 
-const network = process.env.REACT_APP_NETWORK;
+const network = import.meta.env.VITE_APP_NETWORK;
 
 function Networks() {
     return <>{Object.entries(map)
         .sort(([a], [b]) => a === network ? -1 : b === network ? 1 : 0)
         .map(([name, url], i, a) => {
-        const current = name === process.env.REACT_APP_NETWORK;
+        const current = name === import.meta.env.VITE_APP_NETWORK;
         const last = i === a.length - 1;
         return <span key={`net-${name}`}><Link href={url} className={current ? "current": ""}>{name}</Link>{!last ? <>{' '}&middot;{' '}</> : null}</span>
     })}</>

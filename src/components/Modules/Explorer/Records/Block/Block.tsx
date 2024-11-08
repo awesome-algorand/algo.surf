@@ -15,7 +15,7 @@ import {Alert} from "@mui/lab";
 import Copyable from '../../../../Common/Copyable/Copyable';
 import useTitle from "../../../../Common/UseTitle/UseTitle";
 
-const network = process.env.REACT_APP_NETWORK;
+const network = import.meta.env.VITE_APP_NETWORK;
 
 function Block(): JSX.Element {
     const dispatch = useDispatch();

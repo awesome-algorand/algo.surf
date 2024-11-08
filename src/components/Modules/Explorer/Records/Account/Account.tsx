@@ -17,7 +17,7 @@ import LinkToApplication from '../../Common/Links/LinkToApplication';
 import LinkToAccount from '../../Common/Links/LinkToAccount';
 import useTitle from "../../../../Common/UseTitle/UseTitle";
 
-const network = process.env.REACT_APP_NETWORK;
+const network = import.meta.env.VITE_APP_NETWORK;
 
 function plural(num: number): string {
     return num !== 1 ? "s" : "";

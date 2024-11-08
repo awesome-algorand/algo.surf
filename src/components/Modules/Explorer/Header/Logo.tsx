@@ -4,7 +4,7 @@ import {RootState} from "../../../../redux/store";
 import {theme} from '../../../../theme/index';
 import "./Logo.scss";
 
-const networkLabel = process.env.REACT_APP_NETWORK;
+const networkLabel = import.meta.env.VITE_APP_NETWORK;
 const primary = theme.palette.primary.main;
 
 export default function Logo(): JSX.Element {

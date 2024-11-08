@@ -6,7 +6,7 @@ import {Grid, Slide, Typography, Tab, Tabs} from "@mui/material";
 import Search from "../Search/Search";
 import Logo from "./Logo";
 
-const networkLabel = process.env.REACT_APP_NETWORK;
+const networkLabel = import.meta.env.VITE_APP_NETWORK;
 const primary = theme.palette.primary.main;
 
 const routes = ["home", "accounts", "transactions", "assets", "applications"];

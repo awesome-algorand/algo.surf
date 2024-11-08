@@ -8,7 +8,7 @@ import LinkToApplication from "../../../../../../Common/Links/LinkToApplication"
 import SvgIcon, {SvgIconProps} from '@mui/material/SvgIcon';
 import { alpha, styled } from '@mui/material/styles';
 import TreeView from '@mui/lab/TreeView';
-import TreeItem, {treeItemClasses } from '@mui/lab/TreeItem';
+import TreeItem from '@mui/lab/TreeItem';
 import {ArrowForward} from "@mui/icons-material";
 import {
     Chip,
@@ -127,16 +127,16 @@ function AppCallTxnInnerTxns(props): JSX.Element {
         }
 
     )(({ theme }) => ({
-        [`& .${treeItemClasses.iconContainer}`]: {
-            '& .close': {
-                opacity: 0.3,
-            },
-        },
-        [`& .${treeItemClasses.group}`]: {
-            marginLeft: 15,
-            paddingLeft: 30,
-            borderLeft: `1px dashed ${alpha(theme.palette.text.primary, 0.4)}`,
-        }
+        // [`& .${treeItemClasses.iconContainer}`]: {
+        //     '& .close': {
+        //         opacity: 0.3,
+        //     },
+        // },
+        // [`& .${treeItemClasses.group}`]: {
+        //     marginLeft: 15,
+        //     paddingLeft: 30,
+        //     borderLeft: `1px dashed ${alpha(theme.palette.text.primary, 0.4)}`,
+        // }
     }));
 
 
